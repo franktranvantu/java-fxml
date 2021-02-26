@@ -5,6 +5,14 @@
 
 <VBox alignment="center" prefHeight="400" prefWidth="600" spacing="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="sample.Controller">
 
-    <Label text="Welcome to Java FX FXML" />
-    <Button text="Click me" fx:id="button" onAction="#handleClick" />
+    <Button text="Click me" fx:id="button" />
+    <Button text="${button.text}" />
+
+    <fx:define>
+        <ToggleGroup fx:id="toggleGroup" />
+    </fx:define>
+
+    <RadioButton text="Easy" toggleGroup="${toggleGroup}" />
+    <RadioButton text="Medium" toggleGroup="${toggleGroup}" />
+    <RadioButton text="Hard" toggleGroup="${toggleGroup}" />
 </VBox>
